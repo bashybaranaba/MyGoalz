@@ -1,14 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.CreateGoalFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <Button
+        android:id="@+id/CreateGoalButton"
+        android:layout_width="321dp"
+        android:layout_height="51dp"
+        android:text="create"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="540dp" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/DueDate"
+        android:layout_width="319dp"
+        android:layout_height="65dp"
+        android:ems="10"
+        android:inputType="date"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="410dp" />
+
+    <TextView
+        android:id="@+id/CreateGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="create new goal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="104dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="?attr/actionModeCloseDrawable"
+        app:backgroundTint="@color/purple_500"
+        app:tint="@color/white"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="40dp" />
+
+    <TextView
+        android:id="@+id/SetDueDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="due date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="@color/purple_500"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="380dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout6"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="165dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/GoalTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="goal title" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout7"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="232dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/GoalDescription"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:hint="goal description" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

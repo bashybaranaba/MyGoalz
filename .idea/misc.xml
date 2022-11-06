@@ -5,6 +5,10 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23125" />
         <entry key="app/src/main/res/layout/fragment_creat_goal.xml" value="0.2453125" />
+        <entry key="app/src/main/res/layout/fragment_create_goal.xml" value="0.22972869873046878" />
+        <entry key="app/src/main/res/layout/fragment_create_task.xml" value="0.267108154296875" />
+        <entry key="app/src/main/res/layout/fragment_goal.xml" value="0.2453125" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2453125" />
         <entry key="app/src/main/res/layout/fragment_log_in.xml" value="0.2453125" />
         <entry key="app/src/main/res/layout/fragment_splash_screen.xml" value="0.2453125" />
       </map>
