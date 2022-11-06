@@ -2,4 +2,19 @@
     <string name="app_name">MyGoalz</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="NewHabitBanner">Create New habit</string>
+    <string name="habit_label">Habit</string>
+    <string name="habit_input">Give your habit a name</string>
+    <string name="repeat_days_label">Repeat Days</string>
+    <string name="set_reminder">Set Reminder</string>
+    <string name="minute">minute</string>
+    <string name="hourHint">H</string>
+    <string name="saturdayBtn">S</string>
+    <string name="fridayBtn">F</string>
+    <string name="thursdayBtn">T</string>
+    <string name="wednesdayBtn">W</string>
+    <string name="tuesdayBtn">T</string>
+    <string name="mondayBtn">M</string>
+    <string name="sundayBtn">S</string>
+    <string name="habit_createBtn">Create</string>
 </resources>
