@@ -30,4 +30,14 @@
         android:name="com.example.mygoalz.fragments.CreateGoalFragment"
         android:label="fragment_create_goal"
         tools:layout="@layout/fragment_create_goal" />
+    <fragment
+        android:id="@+id/createTaskFragment"
+        android:name="com.example.mygoalz.fragments.CreateTaskFragment"
+        android:label="fragment_create_task"
+        tools:layout="@layout/fragment_create_task" />
+    <fragment
+        android:id="@+id/goalFragment"
+        android:name="com.example.mygoalz.fragments.GoalFragment"
+        android:label="fragment_goal"
+        tools:layout="@layout/fragment_goal" />
 </navigation>
