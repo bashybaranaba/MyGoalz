@@ -40,4 +40,9 @@
         android:name="com.example.mygoalz.fragments.GoalFragment"
         android:label="fragment_goal"
         tools:layout="@layout/fragment_goal" />
+    <fragment
+        android:id="@+id/habitCreationFragment"
+        android:name="com.example.mygoalz.fragments.HabitCreationFragment"
+        android:label="fragment_habit_creation"
+        tools:layout="@layout/fragment_habit_creation" />
 </navigation>
