@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ProfileFragment">
+
+    <ImageButton
+        android:id="@+id/ProfileBackArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:backgroundTint="#FFFFFFFF"
+        android:contentDescription="@string/back_button"
+        android:src="?attr/homeAsUpIndicator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/UsernameProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_username"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ProfileBackArrow" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ProfilePicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UsernameProfile"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/Bio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/bio"
+        android:textColor="@color/theme_blue"
+        android:textSize="30sp"
+        android:paddingStart="20dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ProfilePicture" />
+
+    <TextView
+        android:id="@+id/BioLipsum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="0dp"
+        android:text="@string/lipsum"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Bio" />
+
+    <TextView
+        android:id="@+id/GoalsProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="0dp"
+        android:text="@string/goals"
+        android:textColor="@color/theme_blue"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BioLipsum" />
+
+    <TextView
+        android:id="@+id/AchievementsProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="0dp"
+        android:text="@string/achievements"
+        android:textColor="@color/deselected_grey"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BioLipsum" />
+
+    <TextView
+        android:id="@+id/FirstGoalProfile"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:paddingVertical="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="0dp"
+        android:text="Goal 1"
+        android:textColor="@color/theme_blue"
+        android:textSize="30sp"
+        android:background="@color/goal_background_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GoalsProfile" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="0dp"
+        android:text="D-90 Days"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/FirstGoalProfile"
+        app:layout_constraintStart_toStartOf="@+id/FirstGoalProfile" />
+
+    <ImageView
+        android:id="@+id/FirstGoalImageProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/workout_goal"
+        android:contentDescription="@string/goal_image"
+        app:layout_constraintBottom_toBottomOf="@+id/FirstGoalProfile"
+        app:layout_constraintEnd_toEndOf="@+id/FirstGoalProfile"
+        app:layout_constraintTop_toTopOf="@+id/FirstGoalProfile" />
+
+    <TextView
+        android:id="@+id/SecondGoalProfile"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:paddingVertical="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="0dp"
+        android:text="Goal 1"
+        android:textColor="@color/theme_blue"
+        android:textSize="30sp"
+        android:background="@color/goal_background_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FirstGoalProfile" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="0dp"
+        android:text="D-90 Days"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/SecondGoalProfile"
+        app:layout_constraintStart_toStartOf="@+id/SecondGoalProfile" />
+
+    <ImageView
+        android:id="@+id/SecondGoalImageProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/workout_goal"
+        android:contentDescription="@string/goal_image"
+        app:layout_constraintBottom_toBottomOf="@+id/SecondGoalProfile"
+        app:layout_constraintEnd_toEndOf="@+id/SecondGoalProfile"
+        app:layout_constraintTop_toTopOf="@+id/SecondGoalProfile" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,4 +17,17 @@
     <string name="mondayBtn">M</string>
     <string name="sundayBtn">S</string>
     <string name="habit_createBtn">Create</string>
+    <string name="back_button">Back button</string>
+    <string name="my_username">My username</string>
+    <string name="bio">Bio</string>
+    <string name="lipsum">Lorem ipsum dolor sit amet,
+consectetur adipiscing elit. Nunc
+vulputate libero et velit interdum, ac
+aliquet odio mattis.</string>
+    <string name="goals">Goals</string>
+    <string name="achievements">Achievements</string>
+    <string name="achievement_name">Achievement Name</string>
+    <string name="goal_image">Goal image</string>
+    <string name="achievement_image">Achievement image</string>
+    <string name="achievement_description">Description</string>
 </resources>
