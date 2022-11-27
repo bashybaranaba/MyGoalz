@@ -62,7 +62,6 @@
         android:text="@string/lipsum"
         android:textColor="@color/black"
         android:textSize="25sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AchievementDescription" />
