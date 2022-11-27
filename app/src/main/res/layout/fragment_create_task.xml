@@ -33,9 +33,9 @@
         android:inputType="time"
         app:layout_constraintBottom_toTopOf="@+id/CreateTaskButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SetDueDate" />
-
 
     <TextView
         android:id="@+id/SetDueDate"
@@ -90,7 +90,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/TaskName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:hint="task name" />
     </com.google.android.material.textfield.TextInputLayout>
 

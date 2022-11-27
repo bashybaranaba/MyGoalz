@@ -6,15 +6,36 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.mygoalz.R
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import com.example.mygoalz.databinding.FragmentCreateGoalBinding
 
-class CreateGoalFragment : Fragment() {
+class CreateGoalFragmentFragment : Fragment() {
+
+    private lateinit var navControl: NavController
+    private lateinit var binding: FragmentCreateGoalBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_create_goal, container, false)
+        binding = FragmentCreateGoalBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        init(view)
+    }
+
+    private fun init(view:View) {
+        navControl = Navigation.findNavController(view)
+        binding.floatingActionButton.setOnClickListener {
+            navControl.navigate(R.id.action_createGoalFragment_to_homeFragment)
+        }
+
     }
 
 }

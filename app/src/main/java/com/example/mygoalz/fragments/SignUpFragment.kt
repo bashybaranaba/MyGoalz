@@ -10,11 +10,12 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.mygoalz.R
 import com.example.mygoalz.databinding.FragmentSignUpBinding
-
+import com.google.firebase.auth.FirebaseAuth
 
 class SignUpFragment : Fragment() {
 
     private lateinit var navControl: NavController
+    private lateinit var mAuth: FirebaseAuth
     private lateinit var binding: FragmentSignUpBinding
 
     override fun onCreateView(
@@ -32,16 +33,35 @@ class SignUpFragment : Fragment() {
         init(view)
     }
 
+    private fun registerUser(email: String, pass: String) {
+        mAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener {
+            if (it.isSuccessful)
+                navControl.navigate(R.id.action_signUpFragment_to_logInFragment)
+            else
+                Toast.makeText(context, it.exception.toString(), Toast.LENGTH_SHORT).show()
+
+        }
+    }
 
     private fun init(view:View) {
         navControl = Navigation.findNavController(view)
-        binding.signUp.setOnClickListener{
-            Toast.makeText(context, "Registered successfully", Toast.LENGTH_SHORT).show()
-            navControl.navigate(R.id.action_signUpFragment_to_logInFragment)
-        }
+        mAuth = FirebaseAuth.getInstance()
 
         binding.textSignIn.setOnClickListener{
             navControl.navigate(R.id.action_signUpFragment_to_logInFragment)
+        }
+        binding.signUp.setOnClickListener {
+            val email = binding.editTextTextEmailAddress.text.toString()
+            val pass = binding.editTextTextPassword.text.toString()
+
+
+            if (email.isNotEmpty() && pass.isNotEmpty()) {
+
+                registerUser(email, pass)
+                Toast.makeText(context, "Registered Successfully", Toast.LENGTH_SHORT).show()
+
+            } else
+                Toast.makeText(context, "Empty fields are not allowed", Toast.LENGTH_SHORT).show()
         }
 
     }
