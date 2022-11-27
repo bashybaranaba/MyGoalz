@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SettingsFragment">
+
+    <ImageButton
+        android:id="@+id/SettingsBackArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFFFF"
+        android:contentDescription="@string/back_button"
+        android:scaleType="fitCenter"
+        android:src="?attr/homeAsUpIndicator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/SettingsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SettingsBackArrow" />
+
+    <TextView
+        android:id="@+id/EditProfile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_profile"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:paddingLeft="20dp"
+        android:paddingVertical="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/my_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SettingsTitle" />
+
+    <ImageView
+        android:id="@+id/EditProfileIcon"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#FFFFFFFF"
+        android:layout_marginRight="20dp"
+        android:foregroundTint="#FF000000"
+        android:src="@drawable/edit_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/EditProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/EditProfile" />
+
+    <TextView
+        android:id="@+id/AccountPrivacy"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="15dp"
+        android:paddingLeft="20dp"
+        android:text="@string/account_privacy"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:background="@drawable/my_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditProfile" />
+
+    <ImageView
+        android:id="@+id/AccountPrivacyIcon"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#FFFFFFFF"
+        android:foregroundTint="#FF000000"
+        android:src="@drawable/privacy_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/AccountPrivacy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/AccountPrivacy" />
+
+    <TextView
+        android:id="@+id/ChangePassword"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/change_password"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:paddingLeft="20dp"
+        android:paddingVertical="15dp"
+        android:background="@drawable/my_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AccountPrivacy" />
+
+    <ImageView
+        android:id="@+id/ChangePasswordIcon"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#FFFFFFFF"
+        android:foregroundTint="#FF000000"
+        android:src="@drawable/password_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/ChangePassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AccountPrivacy" />
+
+    <TextView
+        android:id="@+id/Logout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/logout"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:paddingLeft="20dp"
+        android:paddingVertical="15dp"
+        android:background="@drawable/my_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ChangePassword" />
+
+    <ImageView
+        android:id="@+id/LogoutIcon"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#FFFFFFFF"
+        android:foregroundTint="#FF000000"
+        android:src="@drawable/logout_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/Logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ChangePassword" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

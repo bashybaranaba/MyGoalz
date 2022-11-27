@@ -2,57 +2,58 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.ProfileFragment">
+    tools:context=".fragments.ProfileAchievementsFragment">
 
     <ImageButton
-        android:id="@+id/SettingsIcon"
+        android:id="@+id/SettingsIconAch"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:scaleType="fitCenter"
         android:backgroundTint="#FFFFFFFF"
         android:contentDescription="@string/settings"
+        android:scaleType="fitCenter"
         android:src="@drawable/settings_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/EditProfileIcon2"
+        android:id="@+id/EditProfileIcon2Ach"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:backgroundTint="#FFFFFFFF"
         android:contentDescription="@string/settings"
         android:scaleType="fitCenter"
-        android:src="@drawable/edit_icon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:src="@drawable/edit_icon" />
 
     <TextView
-        android:id="@+id/UsernameProfile"
+        android:id="@+id/UsernameProfileAch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SettingsIconAch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/my_username"
         android:textColor="@color/black"
         android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SettingsIcon" />
+        android:textStyle="bold" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/ProfilePicture"
+        android:id="@+id/ProfilePictureAch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UsernameProfileAch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UsernameProfile"
-        tools:src="@tools:sample/avatars" />
+        tools:src="@tools:sample/avatars" />/>
 
     <TextView
-        android:id="@+id/Bio"
+        android:id="@+id/BioAch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ProfilePictureAch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -61,25 +62,25 @@
         android:paddingEnd="0dp"
         android:text="@string/bio"
         android:textColor="@color/theme_blue"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ProfilePicture" />
+        android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/BioLipsum"
+        android:id="@+id/BioLipsumAch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BioAch"
         android:layout_width="386dp"
         android:layout_height="71dp"
         android:paddingStart="20dp"
         android:paddingEnd="0dp"
         android:text="@string/lipsum"
         android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Bio" />
+        android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/GoalsProfile"
+        android:id="@+id/GoalsProfileAch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BioLipsumAch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -87,13 +88,13 @@
         android:paddingStart="20dp"
         android:paddingEnd="0dp"
         android:text="@string/goals"
-        android:textColor="@color/theme_blue"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BioLipsum" />
+        android:textColor="@color/deselected_grey"
+        android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/AchievementsProfile"
+        android:id="@+id/AchievementsProfileAch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BioLipsumAch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -101,13 +102,14 @@
         android:paddingStart="20dp"
         android:paddingEnd="0dp"
         android:text="@string/achievements"
-        android:textColor="@color/deselected_grey"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BioLipsum" />
+        android:textColor="@color/theme_blue"
+        android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/FirstGoalProfile"
+        android:id="@+id/FirstGoalProfileAch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GoalsProfileAch"
         android:layout_width="383dp"
         android:layout_height="96dp"
         android:layout_marginStart="8dp"
@@ -117,37 +119,38 @@
         android:paddingVertical="10dp"
         android:paddingStart="20dp"
         android:paddingEnd="0dp"
-        android:text="Goal 1"
+        android:text="Achievement One"
         android:textColor="@color/theme_blue"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/GoalsProfile" />
+        android:textSize="30sp" />
 
     <TextView
-        android:layout_width="156dp"
-        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/FirstGoalProfileAch"
+        app:layout_constraintStart_toStartOf="@+id/FirstGoalProfileAch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:paddingStart="20dp"
         android:paddingEnd="0dp"
-        android:text="D-90 Days"
+        android:text="Achievement Description"
         android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/FirstGoalProfile"
-        app:layout_constraintStart_toStartOf="@+id/FirstGoalProfile" />
+        android:textSize="20sp" />
 
     <ImageView
-        android:id="@+id/FirstGoalImageProfile"
-        android:layout_width="wrap_content"
+        android:id="@+id/FirstGoalImageProfileAch"
+        app:layout_constraintBottom_toBottomOf="@+id/FirstGoalProfileAch"
+        app:layout_constraintEnd_toEndOf="@+id/FirstGoalProfileAch"
+        app:layout_constraintTop_toTopOf="@+id/FirstGoalProfileAch"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/workout_goal"
+        android:layout_marginRight="20dp"
         android:contentDescription="@string/goal_image"
-        app:layout_constraintBottom_toBottomOf="@+id/FirstGoalProfile"
-        app:layout_constraintEnd_toEndOf="@+id/FirstGoalProfile"
-        app:layout_constraintTop_toTopOf="@+id/FirstGoalProfile" />
+        android:src="@drawable/my_achievements" />
 
     <TextView
-        android:id="@+id/SecondGoalProfile"
+        android:id="@+id/SecondGoalProfileAch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FirstGoalProfileAch"
         android:layout_width="380dp"
         android:layout_height="93dp"
         android:layout_marginStart="8dp"
@@ -157,34 +160,32 @@
         android:paddingVertical="10dp"
         android:paddingStart="20dp"
         android:paddingEnd="0dp"
-        android:text="Goal 1"
+        android:text="Achievement Two"
         android:textColor="@color/theme_blue"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FirstGoalProfile" />
+        android:textSize="30sp" />
 
     <TextView
+        app:layout_constraintBottom_toBottomOf="@+id/SecondGoalProfileAch"
+        app:layout_constraintStart_toStartOf="@+id/SecondGoalProfileAch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="16dp"
         android:paddingStart="20dp"
         android:paddingEnd="0dp"
-        android:text="D-90 Days"
+        android:text="Achievement Description"
         android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/SecondGoalProfile"
-        app:layout_constraintStart_toStartOf="@+id/SecondGoalProfile" />
+        android:textSize="20sp" />
 
     <ImageView
-        android:id="@+id/SecondGoalImageProfile"
-        android:layout_width="wrap_content"
+        android:id="@+id/SecondGoalImageProfileAch"
+        app:layout_constraintBottom_toBottomOf="@+id/SecondGoalProfileAch"
+        app:layout_constraintEnd_toEndOf="@+id/SecondGoalProfileAch"
+        app:layout_constraintTop_toTopOf="@+id/SecondGoalProfileAch"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/workout_goal"
+        android:layout_marginRight="20dp"
         android:contentDescription="@string/goal_image"
-        app:layout_constraintBottom_toBottomOf="@+id/SecondGoalProfile"
-        app:layout_constraintEnd_toEndOf="@+id/SecondGoalProfile"
-        app:layout_constraintTop_toTopOf="@+id/SecondGoalProfile" />
+        android:src="@drawable/achievement_icon" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

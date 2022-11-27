@@ -8,20 +8,20 @@ import android.view.ViewGroup
 import com.example.mygoalz.R
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import com.example.mygoalz.databinding.FragmentProfileBinding
+import com.example.mygoalz.databinding.FragmentPrivacyBinding
 
 
-class Profileragment : Fragment() {
+class PrivacyFragment : Fragment() {
 
     private lateinit var navControl: NavController
-    private lateinit var binding: FragmentProfileBinding
+    private lateinit var binding: FragmentPrivacyBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentProfileBinding.inflate(inflater, container, false)
+        binding = FragmentPrivacyBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -33,17 +33,8 @@ class Profileragment : Fragment() {
 
     private fun init(view:View) {
         navControl = Navigation.findNavController(view)
-        binding.SettingsIcon.setOnClickListener {
-            navControl.navigate(R.id.action_profileFragment_to_settingsFragment2)
-        }
-        binding.AchievementsProfile.setOnClickListener {
-            navControl.navigate(R.id.action_profileAchievementsFragment_to_achievementFragment)
-        }
-        binding.FirstGoalProfile.setOnClickListener {
-            navControl.navigate(R.id.action_profileFragment_to_goalFragment)
-        }
-        binding.SecondGoalProfile.setOnClickListener {
-            navControl.navigate(R.id.action_profileFragment_to_goalFragment)
+        binding.PrivacyBackArrow.setOnClickListener {
+            navControl.navigate(R.id.action_privacyFragment_to_settingsFragment)
         }
     }
 

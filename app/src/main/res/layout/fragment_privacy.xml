@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.PrivacyFragment">
+
+    <ImageButton
+        android:id="@+id/PrivacyBackArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFFFF"
+        android:contentDescription="@string/back_button"
+        android:scaleType="fitCenter"
+        android:src="?attr/homeAsUpIndicator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/PrivacyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/account_privacy"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PrivacyBackArrow" />
+
+    <TextView
+        android:id="@+id/RadioContainer"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:background="@drawable/my_curved_border"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PrivacyTitle" />
+
+
+    <RadioButton
+        android:id="@+id/PublicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Public"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/RadioContainer"
+        app:layout_constraintStart_toStartOf="@+id/RadioContainer"
+        app:layout_constraintTop_toTopOf="@+id/RadioContainer" />
+
+    <RadioButton
+        android:id="@+id/PrivateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Private"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:checked="true"
+        app:layout_constraintBottom_toBottomOf="@+id/RadioContainer"
+        app:layout_constraintEnd_toEndOf="@+id/RadioContainer"
+        app:layout_constraintStart_toStartOf="@+id/RadioContainer"
+        app:layout_constraintTop_toBottomOf="@+id/PublicButton" />
+
+    <TextView
+        android:id="@+id/AccountPrivacyDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/privacy_instructions"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RadioContainer" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
