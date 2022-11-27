@@ -66,4 +66,9 @@
             android:id="@+id/action_splashFragment_to_signUpFragment3"
             app:destination="@id/signUpFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/editProfile"
+        android:name="com.example.mygoalz.fragments.EditProfile"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
 </navigation>
