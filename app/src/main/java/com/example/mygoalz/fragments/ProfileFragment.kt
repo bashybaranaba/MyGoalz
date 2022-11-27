@@ -11,7 +11,7 @@ import androidx.navigation.Navigation
 import com.example.mygoalz.databinding.FragmentProfileBinding
 
 
-class Profileragment : Fragment() {
+class ProfileFragment : Fragment() {
 
     private lateinit var navControl: NavController
     private lateinit var binding: FragmentProfileBinding
@@ -37,7 +37,7 @@ class Profileragment : Fragment() {
             navControl.navigate(R.id.action_profileFragment_to_settingsFragment2)
         }
         binding.AchievementsProfile.setOnClickListener {
-            navControl.navigate(R.id.action_profileAchievementsFragment_to_achievementFragment)
+            navControl.navigate(R.id.action_profileFragment_to_profileAchievementsFragment)
         }
         binding.FirstGoalProfile.setOnClickListener {
             navControl.navigate(R.id.action_profileFragment_to_goalFragment)

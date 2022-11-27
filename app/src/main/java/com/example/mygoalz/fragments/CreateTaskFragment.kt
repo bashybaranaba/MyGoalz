@@ -10,7 +10,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.mygoalz.databinding.FragmentCreateTaskBinding
 
-class CreateTaskFragmentFragment : Fragment() {
+class CreateTaskFragment : Fragment() {
 
     private lateinit var navControl: NavController
     private lateinit var binding: FragmentCreateTaskBinding

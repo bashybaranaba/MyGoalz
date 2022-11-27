@@ -10,123 +10,153 @@
         android:id="@+id/mygoal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="104dp"
-        android:text="my goal"
         android:clickable="true"
+        android:text="my goal"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.112" />
 
     <TextView
         android:id="@+id/MyGoalDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="description"
+        android:layout_marginTop="32dp"
         android:clickable="true"
+        android:text="description"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:textColor="@color/purple_500"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="174dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mygoal" />
 
     <TextView
         android:id="@+id/myGoalDueDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:text="due date"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:textColor="@color/purple_500"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="319dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DescriptionContent" />
 
     <TextView
         android:id="@+id/myGoalDueDate2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="Habits"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:textColor="@color/purple_500"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="424dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
 
     <TextView
         android:id="@+id/myGoalDueDate3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Tasks"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:textColor="@color/purple_500"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="543dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HabitSection" />
 
     <TextView
         android:id="@+id/DescriptionContent"
         android:layout_width="351dp"
         android:layout_height="77dp"
+        android:layout_marginTop="8dp"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="220dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MyGoalDescription" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="36dp"
         android:clickable="true"
         android:src="?attr/actionModeCloseDrawable"
         app:backgroundTint="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.097"
         app:tint="@color/white" />
 
     <EditText
         android:id="@+id/editTextDate"
         android:layout_width="344dp"
         android:layout_height="46dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
-        android:inputType="date"
-        tools:layout_editor_absoluteX="27dp"
         android:hint="27/01/2023"
-        tools:layout_editor_absoluteY="358dp" />
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myGoalDueDate" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/AddHabit"
         android:layout_width="52dp"
         android:layout_height="51dp"
+        android:layout_marginStart="8dp"
         android:clickable="true"
         android:src="@android:drawable/ic_input_add"
         app:backgroundTint="@color/purple_500"
-        app:tint="@color/white"
-        tools:layout_editor_absoluteX="328dp"
-        tools:layout_editor_absoluteY="472dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/HabitSection"
+        app:layout_constraintStart_toEndOf="@+id/HabitSection"
+        app:layout_constraintTop_toTopOf="@+id/HabitSection"
+        app:layout_constraintVertical_bias="0.0"
+        app:tint="@color/white" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/AddTask"
         android:layout_width="54dp"
         android:layout_height="53dp"
+        android:layout_marginStart="4dp"
         android:clickable="true"
         android:src="@android:drawable/ic_input_add"
         app:backgroundTint="@color/purple_500"
-        app:tint="@color/white"
-        tools:layout_editor_absoluteX="328dp"
-        tools:layout_editor_absoluteY="587dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/TaskSection"
+        app:layout_constraintStart_toEndOf="@+id/TaskSection"
+        app:layout_constraintTop_toTopOf="@+id/TaskSection"
+        app:tint="@color/white" />
 
     <TextView
         android:id="@+id/HabitSection"
         android:layout_width="291dp"
         android:layout_height="51dp"
         android:background="@color/material_dynamic_neutral90"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="472dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myGoalDueDate2" />
 
     <TextView
         android:id="@+id/TaskSection"
         android:layout_width="291dp"
         android:layout_height="56dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
         android:background="@color/material_dynamic_neutral90"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="587dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myGoalDueDate3" />
 
     <TextView
         android:id="@+id/textView7"
@@ -134,8 +164,11 @@
         android:layout_height="26dp"
         android:text="Habit"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="483dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/HabitSection"
+        app:layout_constraintEnd_toStartOf="@+id/textView10"
+        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintStart_toStartOf="@+id/HabitSection"
+        app:layout_constraintTop_toTopOf="@+id/HabitSection" />
 
     <TextView
         android:id="@+id/textView8"
@@ -143,18 +176,27 @@
         android:layout_height="27dp"
         android:text="Task"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="603dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/TaskSection"
+        app:layout_constraintEnd_toEndOf="@+id/TaskSection"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="@+id/TaskSection"
+        app:layout_constraintTop_toTopOf="@+id/TaskSection"
+        app:layout_constraintVertical_bias="0.517" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="100dp"
         android:layout_height="25dp"
+        android:layout_marginEnd="7dp"
         android:text="M  T  W  T  F  "
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/purple_500"
-        tools:layout_editor_absoluteX="178dp"
-        tools:layout_editor_absoluteY="484dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/HabitSection"
+        app:layout_constraintEnd_toEndOf="@+id/HabitSection"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="@+id/HabitSection"
+        app:layout_constraintTop_toTopOf="@+id/HabitSection"
+        app:layout_constraintVertical_bias="0.538" />
 
     <TextView
         android:id="@+id/textView10"
@@ -162,8 +204,11 @@
         android:layout_height="25dp"
         android:text="S"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="484dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/HabitSection"
+        app:layout_constraintEnd_toEndOf="@+id/HabitSection"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/HabitSection"
+        app:layout_constraintTop_toTopOf="@+id/HabitSection" />
 
     <TextView
         android:id="@+id/textView11"
@@ -171,8 +216,12 @@
         android:layout_height="25dp"
         android:text="S"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        tools:layout_editor_absoluteX="285dp"
-        tools:layout_editor_absoluteY="484dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/HabitSection"
+        app:layout_constraintEnd_toEndOf="@+id/HabitSection"
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="@+id/HabitSection"
+        app:layout_constraintTop_toTopOf="@+id/HabitSection"
+        app:layout_constraintVertical_bias="0.538" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
