@@ -42,6 +42,12 @@ class HomeFragment : Fragment() {
         binding.SecondGoalProfile.setOnClickListener {
             navControl.navigate(R.id.action_homeFragment_to_goalFragment)
         }
+        binding.MyProfile.setOnClickListener {
+            navControl.navigate(R.id.action_homeFragment_to_profileFragment2)
+        }
+        binding.Settings.setOnClickListener {
+            navControl.navigate(R.id.action_homeFragment_to_settingsFragment)
+        }
     }
 
 
