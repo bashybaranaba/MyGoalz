@@ -10,7 +10,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.mygoalz.databinding.FragmentHabitCreationBinding
 
-class HabitCreationFragmentFragment : Fragment() {
+class HabitCreationFragment : Fragment() {
 
     private lateinit var navControl: NavController
     private lateinit var binding: FragmentHabitCreationBinding

@@ -11,17 +11,26 @@
         android:layout_width="321dp"
         android:layout_height="51dp"
         android:text="create"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="540dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.861" />
 
     <EditText
         android:id="@+id/DueDate"
         android:layout_width="319dp"
         android:layout_height="65dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="date"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="410dp" />
+        app:layout_constraintBottom_toTopOf="@+id/CreateGoalButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SetDueDate"
+        app:layout_constraintTop_toTopOf="@+id/SetDueDate"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/CreateGoal"
@@ -29,8 +38,12 @@
         android:layout_height="wrap_content"
         android:text="create new goal"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="104dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.572"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/floatingActionButton"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -39,31 +52,43 @@
         android:clickable="true"
         android:src="?attr/actionModeCloseDrawable"
         app:backgroundTint="@color/purple_500"
-        app:tint="@color/white"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="40dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.103"
+        app:tint="@color/white" />
 
     <TextView
         android:id="@+id/SetDueDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:text="due date"
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
         android:textColor="@color/purple_500"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="380dp" />
+        app:layout_constraintBottom_toTopOf="@+id/CreateGoalButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout7"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout6"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="165dp">
+        android:layout_marginBottom="27dp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CreateGoal">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/GoalTitle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:hint="goal title" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -71,8 +96,10 @@
         android:id="@+id/textInputLayout7"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="232dp">
+        app:layout_constraintBottom_toTopOf="@+id/CreateGoalButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CreateGoal">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/GoalDescription"
