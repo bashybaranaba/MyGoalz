@@ -6,17 +6,107 @@
     android:layout_height="match_parent"
     tools:context=".fragments.HomeFragment">
 
-
     <TextView
         android:id="@+id/goals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="164dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="132dp"
         android:text="goals"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/FirstGoalProfile"
+        android:layout_width="378dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/goal_background_blue"
+        android:clickable="true"
+        android:paddingVertical="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="0dp"
+        android:text="Goal 1"
+        android:textColor="@color/theme_blue"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/goals"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/goals"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="208dp" />
+
+    <TextView
+        android:layout_width="156dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="4dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="0dp"
+        android:text="D-90 Days"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/FirstGoalProfile"
+        app:layout_constraintStart_toStartOf="@+id/FirstGoalProfile" />
+
+    <ImageView
+        android:id="@+id/FirstGoalImageProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:contentDescription="@string/goal_image"
+        android:src="@drawable/workout_goal"
+        app:layout_constraintBottom_toBottomOf="@+id/FirstGoalProfile"
+        app:layout_constraintEnd_toEndOf="@+id/FirstGoalProfile"
+        app:layout_constraintTop_toTopOf="@+id/FirstGoalProfile"
+        app:layout_constraintVertical_bias="0.355" />
+
+    <TextView
+        android:id="@+id/SecondGoalProfile"
+        android:layout_width="374dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/goal_background_blue"
+        android:clickable="true"
+        android:paddingVertical="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="0dp"
+        android:text="Goal 2"
+        android:textColor="@color/theme_blue"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FirstGoalProfile" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="8dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="0dp"
+        android:text="D-90 Days"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/SecondGoalProfile"
+        app:layout_constraintStart_toStartOf="@+id/SecondGoalProfile" />
+
+    <ImageView
+        android:id="@+id/SecondGoalImageProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:contentDescription="@string/goal_image"
+        android:src="@drawable/workout_goal"
+        app:layout_constraintBottom_toBottomOf="@+id/SecondGoalProfile"
+        app:layout_constraintEnd_toEndOf="@+id/SecondGoalProfile"
+        app:layout_constraintTop_toTopOf="@+id/SecondGoalProfile"
+        app:layout_constraintVertical_bias="0.523" />
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/AddGoalButton"
