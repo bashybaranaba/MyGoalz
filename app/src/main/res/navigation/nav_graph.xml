@@ -105,7 +105,11 @@
         android:id="@+id/editProfile"
         android:name="com.example.mygoalz.fragments.EditProfile"
         android:label="fragment_edit_profile"
-        tools:layout="@layout/fragment_edit_profile" />
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_editProfile_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
     <fragment
         android:id="@+id/privacyFragment"
         android:name="com.example.mygoalz.fragments.PrivacyFragment"
@@ -138,6 +142,9 @@
         <action
             android:id="@+id/action_profileFragment_to_goalFragment"
             app:destination="@id/goalFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_editProfile"
+            app:destination="@id/editProfile" />
     </fragment>
     <fragment
         android:id="@+id/profileAchievementsFragment"
@@ -153,6 +160,9 @@
         <action
             android:id="@+id/action_profileAchievementsFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_profileAchievementsFragment_to_editProfile"
+            app:destination="@id/editProfile" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"

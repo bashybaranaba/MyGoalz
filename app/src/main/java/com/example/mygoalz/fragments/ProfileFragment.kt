@@ -45,6 +45,9 @@ class ProfileFragment : Fragment() {
         binding.SecondGoalProfile.setOnClickListener {
             navControl.navigate(R.id.action_profileFragment_to_goalFragment)
         }
+        binding.EditProfileIcon2.setOnClickListener {
+            navControl.navigate(R.id.action_profileFragment_to_editProfile)
+        }
     }
 
 
